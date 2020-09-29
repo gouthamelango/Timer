@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Timer"
+        android:textSize="30sp" />
+
+    <ProgressBar
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/view_progress_bar"
+        android:layout_below="@id/timerText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:progressDrawable="@drawable/drawable_circularprogressbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/timerText"
+        android:textSize="20sp"
+        android:id="@+id/timerRunning"
+        android:layout_marginTop="155dp"/>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/optionsLayout"
+        android:layout_below="@+id/view_progress_bar">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_pause_24"
+
+            android:id="@+id/plusTimer"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+           />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_refresh_24"
+            android:layout_marginRight="20dp"
+            android:id="@+id/reset"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="Enter in seconds.."
+            android:id="@+id/userEdit"
+            android:inputType="number"/>
+
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Start"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/optionsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:background="@drawable/gradient"
+        android:id="@+id/btn"
+        />
+
+
+
+
+
+
+</RelativeLayout>
